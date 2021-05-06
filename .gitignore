@@ -1,0 +1,17 @@
+# ignore Desktop Services Store
+.DS_Store
+
+# ignore IntelliJ's project specific settings files
+.idea
+
+# .msh
+
+__pycache__
+
+helmholtz_pkg/helmholtz_pkg.egg-info
+helmholtz_pkg/helmholtz_pkg/tests
+helmholtz_pkg/helmholtz_pkg/utils
+micca_pkg
+rijke_pkg
+
+MICCA
