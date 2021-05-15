@@ -67,7 +67,7 @@ def run():
     ftf = n_tau(params.n, params.tau)
 
     D = ActiveFlame(mesh, subdomains,
-                    params.x_f, params.x_r, params.rho_in, 1., 1., ftf,
+                    params.x_r, params.rho_in, 1., 1., ftf,
                     degree=degree)
     D.assemble_submatrices()
 

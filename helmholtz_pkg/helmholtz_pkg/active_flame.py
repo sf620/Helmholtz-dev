@@ -9,25 +9,24 @@ class ActiveFlame:
 
     gamma = 1.4
 
-    def __init__(self, mesh, subdomains, x_f, x_r, rho_u, Q, U, FTF, degree=1, comm=None,
+    def __init__(self, mesh, subdomains, x_r, rho_u, Q, U, FTF, degree=1, comm=None,
                  constrained_domain=None):
 
         """
-        x_f and x_r as numpy.ndarray
+        x_r as numpy.ndarray
 
         Consider adding:
 
-        if isinstance(x_f, float):
-            x_f = np.array([x_f])
-        # elif isinstance(x_f, (list, tuple)):
-        #     x_f = np.array(x_f)
+        if isinstance(x_r, float):
+            x_r = np.array([x_r])
+        # elif isinstance(x_r, (list, tuple)):
+        #     x_r = np.array(x_r)
         """
 
         self.comm = comm
 
         self.mesh = mesh
         self.subdomains = subdomains
-        self.x_f = x_f
         self.x_r = x_r
         self.rho_u = rho_u
         # self.Q = Q
@@ -178,7 +177,7 @@ class ActiveFlame:
 
     def assemble_submatrices(self, problem_type='direct'):
 
-        num_fl = len(self.x_f)  # number of flames
+        num_fl = len(self.x_r)  # number of flames
         global_size = self.function_space.dim()
         local_size = len(self.function_space.dofmap().dofs())
 
