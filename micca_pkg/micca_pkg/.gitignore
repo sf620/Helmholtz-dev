@@ -1,0 +1,7 @@
+# ignore all directories
+*/
+
+# but do not ignore GmshDir
+# !MeshDir/
+
+utils.py

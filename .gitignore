@@ -8,10 +8,14 @@
 
 __pycache__
 
+geometry_pkg
 helmholtz_pkg/helmholtz_pkg.egg-info
 helmholtz_pkg/helmholtz_pkg/tests
 helmholtz_pkg/helmholtz_pkg/utils
-micca_pkg
+micca_pkg/micca_pkg.egg-info
+micca_pkg/micca_pkg/utils.py
+Rijke/sensitivity.py
 rijke_pkg
+UnitSquare
 
 MICCA
